@@ -1,0 +1,38 @@
+<div>
+    {{#with main}}
+    <main>
+        <section>
+            {{> title data='All skills' big=true}}
+            <ul>
+                {{#each skills}}
+                <li>
+                    {{name}}
+
+                    {{#if point includeZero=true}} - {{point}} {{/if}}
+                    {{#if isTop}} (TOP) {{/if}}
+
+                    {{#unless point}}
+                    {{#if point includeZero=true}}
+                    (зараз вивчаю)
+                    {{else}} (не вивчаю)
+                    {{/if}}
+                    {{/unless}}
+
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+        <section>
+            {{> title data='My hobbies'}}
+            <ol>
+                {{#each hobbies}}
+                <li>
+                    {{name}}
+                    {{#if isMain}} (favorite) {{/if}}
+                </li>
+                {{/each}}
+            </ol>
+        </section>
+    </main>
+    {{/with}}
+</div>
