@@ -1,0 +1,102 @@
+<header>
+    <div>
+        <h1>{{name}}</h1>
+        <p>{{description}}</p>
+        <strong>Price: {{price}}</strong>
+        <br>
+        <i>Category: {{category}}</i>
+    </div>
+</header>
+<main>
+    {{#with features}}
+    <section>
+        <h2>Features</h2>
+
+        {{#with processor}}
+        <div>
+            <strong>Processor</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        {{#with memory}}
+        <div>
+            <strong>Memory</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        {{#with storage}}
+        <div>
+            <strong>Storage</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        {{#with display}}
+        <div>
+            <strong>Display</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        {{#with graphics}}
+        <div>
+            <strong>Graphics</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        <div>
+            <strong>Ports</strong>
+            {{#each ports}}
+            {{> mac}}
+            <hr>
+            {{/each}}
+        </div>
+
+        {{#with battery}}
+        <div>
+            <strong>Battery</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        <div>
+            <strong>Weight: </strong>
+            <span>{{weight}}</span>
+        </div>
+        <br>
+
+        {{#with dimensions}}
+        <div>
+            <strong>Dimensions</strong>
+            {{> mac}}
+        </div>
+        {{/with}}
+
+        <div>
+            <strong>Operating system: </strong>
+            <span>{{operating_system}}</span>
+        </div>
+        <br>
+
+    </section>
+
+    <section>
+        <div>
+            <div>
+                <h3>Accessories:</h3>
+            </div>
+            <br>
+
+            {{#each accessories}}
+            {{> mac}}
+            <hr>
+            {{/each}}
+        </div>
+
+    </section>
+    {{/with}}
+
+</main>
