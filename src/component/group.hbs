@@ -1,0 +1,12 @@
+<div>
+    <strong>{{name}}</strong>
+    <span>(id: {{id}})</span>
+    <p>{{description}}</p>
+</div>
+<div>
+    <i>Members:</i>
+    {{#each members}}
+    {{> user}}
+    {{/each}}
+</div>
+<hr>
