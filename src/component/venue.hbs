@@ -1,0 +1,19 @@
+{{#with venue}}
+<div>
+    <div>Venue: {{name}}</div>
+    {{> address}}
+</div>
+
+{{/with}}
+<div>
+    <h4>Performers</h4>
+    <ol>
+        {{#each performers}}
+        <li>
+            <div>Name: {{name}}</div>
+            <div>Type: {{type}}</div>
+        </li>
+        <br>
+        {{/each}}
+    </ol>
+</div>
