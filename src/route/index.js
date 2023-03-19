@@ -428,7 +428,6 @@ router.get('/bio', function (req, res) {
   })
 })
 
-
 router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'basic',
@@ -522,7 +521,7 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
