@@ -427,6 +427,8 @@ router.get('/bio', function (req, res) {
 
 router.get('/car', function (req, res) {
   res.render('car', {
+    layout: 'basic',
+    page: { title: 'Car' },
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
