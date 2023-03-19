@@ -503,6 +503,11 @@ router.get('/js', function (req, res) {
         type: 'blog',
       },
     ],
+
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+
   })
 })
 // Підключаємо роутер до бек-енду
