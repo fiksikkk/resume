@@ -428,7 +428,6 @@ router.get('/bio', function (req, res) {
   })
 })
 
-
 router.get('/mac', function (req, res) {
   res.render('mac', {
     layout: 'basic',
@@ -512,6 +511,9 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
+  })
+})
+
 router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'basic',
