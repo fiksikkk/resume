@@ -1,0 +1,25 @@
+{{#with museum}}
+<div>
+    <div>Museum: {{name}}</div>
+    {{> address}}
+
+</div>
+<div>
+    <h4>Exhibits</h4>
+    <ol>
+        {{#each exhibits}}
+        <li>
+            <div>Exhibit: {{name}}</div>
+            <div>Artist: {{artist}}</div>
+            <div>Description: {{description}}</div>
+            {{#if audio_guide}}
+            <div>Audio guide include</div>
+            {{else}}
+            <div>Audio guide not include</div>
+            {{/if}}
+        </li>
+        <br>
+        {{/each}}
+    </ol>
+</div>
+{{/with}}
