@@ -1,0 +1,70 @@
+<header>
+    <h1>Web languages</h1>
+</header>
+<main>
+    {{#each web.languages}}
+    <div>
+        <h3>{{name}}</h3>
+        <div>Version: {{version}}</div>
+        <div>Description: {{description}}</div>
+    </div>
+    <br>
+
+    {{#if elements}}
+    <h4>Elements</h4>
+    <hr>
+
+    {{#each elements}}
+    {{> element}}
+    <div>
+        <strong>Attributes:</strong>
+        {{#each attributes}}
+        {{> element}}
+        {{/each}}
+        <hr>
+    </div>
+    {{/each}}
+    {{/if}}
+
+
+    {{#if properties}}
+    <h4>Properties</h4>
+    <hr>
+
+    {{#each properties}}
+    {{> element}}
+    <div>
+        <strong>Values</strong>
+        {{#each values}}
+        {{> element}}
+        {{/each}}
+        <hr>
+    </div>
+
+    {{/each}}
+    {{/if}}
+
+
+    {{#if functions}}
+    <h4>Functions</h4>
+    <hr>
+
+    {{#each functions}}
+    {{> element}}
+    <div>
+        <strong>Parameters</strong>
+        {{#each parameters}}
+        {{> element}}
+        {{/each}}
+        <hr>
+    </div>
+    {{/each}}
+    {{/if}}
+
+    <br>
+    <hr>
+    <hr>
+    <br>
+    {{/each}}
+
+</main>
