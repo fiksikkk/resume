@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-body">
+        {{#if center}}
+        <div class="text-center">
+            {{/if}}
+            {{#if end}}
+            <div class="text-end">
+                {{/if}}
+                <div class="display-4">{{title}}</div>
+                <br>
+                <h6>{{sub_title}}</h6>
+                <br>
+                <p>{{description}}</p>
+                <br>
+                {{#if center}}
+            </div>
+            {{/if}}
+            {{#if end}}
+        </div>
+        {{/if}}
+        <button class="btn btn-outline-warning">{{button}}</button>
+    </div>
+</div>
