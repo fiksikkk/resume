@@ -685,13 +685,21 @@ router.get('/js', function (req, res) {
   })
 })
 
-router.get('/bootstrap', function (req, res) {
-  res.render('bootstrap', {
+
+router.get('/bootstrap-1', function (req, res) {
+  res.render('bootstrap-1', {
     layout: 'bootstrap',
   })
 })
-router.get('/bootstrapold', function (req, res) {
-  res.render('bootstrapOld', {
+
+router.get('/bootstrap-2', function (req, res) {
+  res.render('bootstrap-2', {
+    layout: 'bootstrap',
+  })
+})
+
+router.get('/bootstrap-3', function (req, res) {
+  res.render('bootstrap-3', {
     layout: 'bootstrap',
   })
 })
