@@ -1,16 +1,5 @@
 <main>
-    {{!-- breadcrumbs --}}
-    <div class="ms-4">
-        <ol class="breadcrumb">
-            {{#each breadcrumb}}
-            {{!-- {{#if @last}} --}}
-            <li class="breadcrumb-item disabled">
-                <a {{#unless @last}} href={{url}} {{/unless}}>{{name}}</a>
-            </li>
-            {{/each}}
-
-        </ol>
-    </div>
+    {{> breadcrumb}}
 
     {{#with productData}}
     <section class="mb-5">

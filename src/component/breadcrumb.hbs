@@ -1,0 +1,10 @@
+<div class="ms-4">
+    <ol class="breadcrumb">
+        {{#each breadcrumb}}
+        <li class="breadcrumb-item disabled">
+            <a {{#unless @last}} href={{url}} {{/unless}}>{{name}}</a>
+        </li>
+        {{/each}}
+
+    </ol>
+</div>
