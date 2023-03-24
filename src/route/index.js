@@ -685,7 +685,6 @@ router.get('/js', function (req, res) {
   })
 })
 
-
 router.get('/bootstrap-1', function (req, res) {
   res.render('bootstrap-1', {
     layout: 'bootstrap',
@@ -1441,5 +1440,23 @@ router.get('/task31', function (req, res) {
   })
 })
 
+router.get('/list', function (req, res) {
+  res.render('list', {
+    layout: 'basic',
+    list: [
+      { name: 'First button' },
+      { name: 'Second button' },
+      { name: 'Error button' },
+      { name: 'Submit button' },
+    ],
+
+    user: {
+      name: 'Ivan',
+      role: 'Admin',
+      isConfirm: true,
+      age: 32,
+    },
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
