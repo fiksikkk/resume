@@ -703,6 +703,12 @@ router.get('/bootstrap-3', function (req, res) {
   })
 })
 
+router.get('/bootstrap-4', function (req, res) {
+  res.render('bootstrap-4', {
+    layout: 'bootstrap',
+  })
+})
+
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
