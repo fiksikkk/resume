@@ -1,0 +1,16 @@
+<header>
+    {{#with navigation}}
+    <div class="card">
+        <nav class="nav row p-2">
+            <div class="nav-item col-6 ps-4">
+                <h3>{{Logo}}</h3>
+            </div>
+            {{#each links}}
+            <div class="nav-item col-2 p-0">
+                <a class="nav-link" href={{href}}>{{text}}</a>
+            </div>
+            {{/each}}
+        </nav>
+    </div>
+    {{/with}}
+</header>
