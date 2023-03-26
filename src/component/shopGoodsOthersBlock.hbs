@@ -1,0 +1,12 @@
+{{#with goodsOtherBlock}}
+<section class="my-5">
+    <h3 class="text-center">{{title}}</h3>
+    <div class="row">
+        {{#each cards}}
+        <div class="col-4">
+            {{> shopcard}}
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/with}}
