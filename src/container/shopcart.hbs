@@ -1,0 +1,51 @@
+<main>
+
+    {{#with header}}
+    <section class="row">
+        <h2 class="col-6">{{title}}</h2>
+        <div class="col-6 text-end p-0">
+            {{#with button}} <a class="btn btn-outline-secondary" href={{link}}>{{text}}</a> {{/with}}
+        </div>
+    </section>
+    {{/with}}
+
+    <hr>
+
+    <section>
+        {{#each goodsBlock}}
+        {{> cartGoodsItem}}
+        {{/each}}
+    </section>
+
+    <hr>
+
+    {{#with total}}
+    <section class="row my-4">
+        <div class="col-8">
+            <h3>{{title}}</h3>
+            <h2>{{amount}}</h2>
+            <div>{{delivery}}</div>
+        </div>
+        <div class="col-4">
+            {{#each buttons}}
+            <div>
+                <a href={{link}} {{#if isSuccess}} class="btn btn-success my-2" {{/if}} {{#if isOutline}}
+                    class="btn btn-outline-success my-2" {{/if}}>{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+
+    </section>
+    {{/with}}
+
+    <hr>
+
+    {{> shopGoodsOthersBlock}}
+
+    <hr>
+
+    {{> shopSubscribeBlock}}
+
+    <hr>
+
+</main>
