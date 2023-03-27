@@ -5,11 +5,15 @@
             <div class="nav-item col-4 ps-4">
                 <h3>{{Logo}}</h3>
             </div>
-            {{#each links}}
-            <div class="nav-item col-2 p-0">
-                <a class="nav-link" href={{href}}>{{text}}</a>
+            <div class="col-8">
+                <div class="d-flex justify-content-end">
+                    {{#each links}}
+                    <div class="nav-item p-0 mx-2">
+                        <a class="nav-link" href={{href}}>{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
-            {{/each}}
         </nav>
     </div>
     {{/with}}

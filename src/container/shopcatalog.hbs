@@ -1,0 +1,103 @@
+<main>
+    {{> breadcrumb}}
+
+    <section>
+        <h1 class="mb-4">{{header}}</h1>
+        <div class="row">
+            {{#each sortBlock}}
+            <div class="col-3">
+                <select class="form-select">
+                    <option value="" selected disabled>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value={{value}}>{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+
+            {{#with filterBlock}}
+            <div class="card col-4">
+                <div class="card-body">
+                    {{#with sellers}}
+                    <div class="row g-3">
+                        <div>{{title}}</div>
+                        <div>
+                            {{#each list}}
+                            {{> formCheckItem name="seller"}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/with}}
+
+                    <hr>
+
+                    {{#with brands}}
+                    <div class="row g-3">
+                        <div>{{title}}</div>
+                        <input placeholder={{input.placeholder}} class="form-control">
+                        {{#each options}}
+                        {{> formCheckItem name="brand"}}
+                        {{/each}}
+                    </div>
+                    {{/with}}
+
+                    <hr>
+
+                    {{#with price}}
+                    <div>
+                        <div class="mb-3">{{title}}</div>
+                        <div class="row">
+                            {{#each range}}
+                            <div class="col-4">
+                                <input placeholder="{{this}}" class="form-control">
+                            </div>
+                            {{/each}}
+                            {{#with button}}
+                            <div class="col-4">
+                                <a href={{link}} class="btn btn-outline-secondary px-3">{{text}}</a>
+                            </div>
+                            {{/with}}
+                        </div>
+                    </div>
+                    {{/with}}
+
+                    <hr>
+
+                    {{#each filterList}}
+                    <div class="row g-3">
+                        <div>{{title}}</div>
+                        {{#each options}}
+                        {{> formCheckItem name=../title}}
+                        {{/each}}
+                    </div>
+                    {{#unless @last}}
+                    <hr>
+                    {{/unless}}
+                    {{/each}}
+
+                </div>
+            </div>
+            {{/with}}
+
+
+            <div class="col-8">
+                <div class="row ps-1 g-3">
+                    {{#each goodsList}}
+                    <div class="col-6">
+                        {{> catalogItem}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> shopaction}}
+
+    <hr>
+</main>
