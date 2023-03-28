@@ -3,3 +3,17 @@
     margin: 0 10%;
   }
 }
+.footer a {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  color: rgb(46, 46, 51);
+}
+.footer a:hover {
+  color: aquamarine;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
