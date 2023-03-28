@@ -1,3 +1,5 @@
-h1 {
-  color: rgb(104, 229, 233);
+@media (min-width: 1200px) {
+  body {
+    margin: 0 10%;
+  }
 }
