@@ -109,6 +109,26 @@ router.get('/', function (req, res) {
         name: 'web',
         link: '/web',
       },
+      {
+        name: 'bootstrap-1',
+        link: '/bootstrap-1',
+      },
+      {
+        name: 'bootstrap-2',
+        link: '/bootstrap-2',
+      },
+      {
+        name: 'bootstrap-3',
+        link: '/bootstrap-3',
+      },
+      {
+        name: 'bootstrap-4',
+        link: '/bootstrap-4',
+      },
+      {
+        name: 'bootstrap-5',
+        link: '/bootstrap-5',
+      },
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
