@@ -1,5 +1,64 @@
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+<main>
+    <section>
+        <div class="card">
+            <div class="card-body">
+                <div class="row display-6">
+                    <div class="col-6 ">Yakiv Varenyk</div>
+                    <div class="col-6 text-end">Resume project</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <button type="button" class="btn btn-primary">Купити</button>
-</div>
+    <section>
+        <div class="mb-3" style="font-size: larger;">
+            <h1>Pages list</h1>
+            <div>This is my educational project with course from IT Brains</div>
+            <div>Using technology: <i class="fa-brands fa-html5"></i> HTML5, <img width="30px"
+                    src="/svg/handlebars.svg">Handlebars,
+                <i class="bi bi-bootstrap-fill"></i>
+                Bootstrap
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mb-5">
+                <h2>Shop:</h2>
+                <div class="row">
+                    {{#each shopPages}}
+                    <div class="col-6 mb-2">
+                        <a href={{link}} class="btn btn-success text-capitalize">{{name}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-6 "></div>
+            <div class="col-6">
+                <h2>Other:</h2>
+                <div class="row">
+                    {{#each otherPages}}
+                    <div class="mb-2 col-4">
+                        <a href={{link}} class="btn btn-primary text-capitalize">{{name}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<footer>
+    <div class="footer mb-4">
+        <a href="mailto:yakov.varenik@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope fa-2xl"></i>
+        </a>
+        <a href="https://t.me/Pelmenevich" target="_blank">
+            <i class="fa-brands fa-telegram fa-2xl"></i>
+        </a>
+        <a href="tel:+380953770241" target="_blank">
+            <i class="fa-solid fa-phone fa-2xl"></i>
+        </a>
+
+    </div>
+
+    <div class="text-center">2023 © Fiksik</div>
+</footer>

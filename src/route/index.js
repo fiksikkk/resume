@@ -35,8 +35,101 @@ router.get('/', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
-    header,
-    footer,
+    layout: 'basic',
+    shopPages: [
+      { name: 'home', link: '/shophome' },
+      { name: 'news', link: '/shopnews' },
+      { name: 'catalog', link: '/shopcatalog' },
+      { name: 'product', link: '/shopproduct' },
+      { name: 'cart', link: '/shopcart' },
+      { name: 'order', link: '/shoporder' },
+      { name: 'profile', link: '/shopprofile' },
+      { name: 'review', link: '/shopreview' },
+    ],
+    otherPages: [
+      {
+        name: 'task31',
+        link: '/task31',
+      },
+      {
+        name: 'task22',
+        link: '/task22',
+      },
+      {
+        name: 'task21',
+        link: '/task21',
+      },
+
+      {
+        name: 'summary',
+        link: '/summary',
+      },
+      {
+        name: 'skills',
+        link: '/skills',
+      },
+      {
+        name: 'education',
+        link: '/education',
+      },
+      {
+        name: 'work history',
+        link: '/work',
+      },
+
+      {
+        name: 'bio',
+        link: '/bio',
+      },
+      {
+        name: 'car',
+        link: '/car',
+      },
+      {
+        name: 'facebook',
+        link: '/facebook',
+      },
+      {
+        name: 'js',
+        link: '/js',
+      },
+      {
+        name: 'mac',
+        link: '/mac',
+      },
+      {
+        name: 'person',
+        link: '/person',
+      },
+      {
+        name: 'program',
+        link: '/program',
+      },
+      {
+        name: 'web',
+        link: '/web',
+      },
+      {
+        name: 'bootstrap-1',
+        link: '/bootstrap-1',
+      },
+      {
+        name: 'bootstrap-2',
+        link: '/bootstrap-2',
+      },
+      {
+        name: 'bootstrap-3',
+        link: '/bootstrap-3',
+      },
+      {
+        name: 'bootstrap-4',
+        link: '/bootstrap-4',
+      },
+      {
+        name: 'bootstrap-5',
+        link: '/bootstrap-5',
+      },
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
